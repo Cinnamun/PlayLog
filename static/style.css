@@ -1,0 +1,261 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Misc */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+button {
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+.credit {
+    padding-bottom: 30px;
+    font-size: small;
+    color: rgb(54, 207, 107);
+}
+*:hover {
+    transition: all 0.2s ease;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 1em;
+    background: linear-gradient(to bottom, rgb(34, 34, 34), rgb(22, 22, 22));
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(53, 53, 53);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(83, 83, 83);
+}
+
+/* Login page */
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(34, 34, 34), rgb(22, 22, 22));
+    height: 300px;
+    border-radius: 5px;
+    margin-top: 25vh;
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#loginBtn {
+    background-color: rgb(57, 219, 114);
+    font-weight: bold;
+    font-size: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 5px rgba(120, 212, 185, 0.8));
+}
+#loginBtn:hover {
+    opacity: 80%;
+}
+#loginBtn:active {
+    opacity: 100%;
+}
+
+/* Profile header */
+.header {
+    background: linear-gradient(to bottom, rgba(120, 212, 185, 0.8), rgba(54, 207, 107, 0.8));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 5px 5px rgba(54, 207, 107, 0.8));
+}
+.headerIn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width: 1050px) {
+    .headerIn, .loginPage {
+        width: 1000px;
+    }
+}
+@media (max-width: 1050px) {
+    .headerIn, .loginPage {
+        width: 700px;
+    }
+}
+@media (max-width: 750px) {
+    .headerIn, .loginPage {
+        width: 500px;
+    }
+}
+.headerLeft {
+    display: flex;
+    align-items: center;
+}
+.pfp {
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+.username {
+    font-size: xx-large;
+    font-weight: bold;
+}
+#logoutBtn {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    opacity: 80%;
+}
+#logoutBtn:hover {
+    opacity: 100%;
+}
+#logoutBtn:active {
+    opacity: 80%;
+}
+
+/* Tracks */
+.trackList {
+    padding: 15px;
+    margin-top: 130px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: rgb(197, 197, 197);
+    background: linear-gradient(to bottom, rgb(34, 34, 34), rgb(22, 22, 22));
+}
+@media (min-width: 1050px) {
+    .trackList {
+        width: 970px;
+    }
+}
+@media (max-width: 1050px) {
+    .trackList {
+        width: 670px;
+    }
+}
+@media (max-width: 750px) {
+    .trackList {
+        width: 470px;
+    }
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+.tab {
+    font-weight: bold;
+    font-size: larger;
+    background: none;
+    border: none;
+    color: inherit;
+    outline: inherit;
+    padding: 0;
+    width: 100%;
+}
+.tab:hover {
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+    color: white;
+}
+.tab:active {
+    color: inherit;
+}
+.tab.active {
+    color: rgb(54, 207, 107);
+}
+.line {
+    background-color: rgb(54, 207, 107);
+    display: flex;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* List of tracks */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+li:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+.trackLeft, .trackRight {
+    display: flex;
+    align-items: center;
+}
+.idx {
+    width: 20px;
+    font-weight: bold;
+}
+.songImg {
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.trackInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 10px;
+}
+.trackName {
+    font-weight: bold;
+    color: white;
+}
+.spotifyIcon {
+    height: 18px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 8px;
+}

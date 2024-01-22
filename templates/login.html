@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../static/music.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Profile display for your Spotify account">
+  <title>PlayLog</title>
+  <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+</head>
+
+<body>
+  <div>
+    <!-- Login page -->
+    <div class="loginPage">
+      <span class="title">PlayLog</span>
+      <span>Please login with your spotify account to use the website!</span>
+      <button id="loginBtn">Login with Spotify</button>
+    </div>
+
+    <!-- Credits -->
+    <span class="credit">© 2024 Spotify API</span>
+    <br />
+    <a class="credit" target="_blank" href="https://github.com/Cinnamun">Github</a>
+  </div>
+
+  <script src='{{ url_for("static", filename="login.js") }}'></script>
+</body>
+
+</html>

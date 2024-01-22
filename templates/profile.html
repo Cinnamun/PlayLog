@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../static/music.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Profile display for your Spotify account">
+  <title>PlayLog Profile</title>
+  <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+</head>
+
+<body>
+  <div>
+    <!-- Header -->
+    <div class="header">
+      <div class="headerIn">
+        <div class="headerLeft">
+          <img class="pfp" src="{{ user_data.pfp }}" />
+          <div>
+            <span class="username">Good <span id="timeOfDay"></span>, {{ user_data.username }}</span>
+            <br />
+            <span>Check out your profile!</span>
+          </div>
+        </div>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <!-- Tracks -->
+    <div class="trackList">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button id="topTracks" class="tab">Top tracks this month</button>
+        <button id="topArtists" class="tab">Top artists this month</button>
+        <button id="recentlyPlayed" class="tab">Recently played</button>
+      </div>
+      <!-- Line -->
+      <span class="line"></span>
+      <!-- Tracks -->
+      <ul id="tracks">
+
+      </ul>
+    </div>
+    
+    <!-- Credits -->
+    <span class="credit">© 2024 Spotify API</span>
+    <br />
+    <a class="credit" target="_blank" href="https://github.com/Cinnamun">Github</a>
+  </div>
+
+  <script>
+    var topTracks = {{ top_tracks | tojson | safe }};
+    var topArtists = {{ top_artists | tojson | safe }};
+    var recentlyPlayed = {{ recently_played | tojson | safe }};
+  </script>
+  <script src='{{ url_for("static", filename="profile.js") }}'></script>
+</body>
+
+</html>
